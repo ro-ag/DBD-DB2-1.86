@@ -13,6 +13,21 @@ extern "C" {
 }
 #endif
 
+#ifndef __DBD_DBI_FIX__
+#define __DBD_DBI_FIX__
+    #include <specstrings.h>
+    #ifndef __out_ecount_opt
+        #define __out_ecount_opt    SAL__out_ecount_opt
+    #endif
+    #ifndef __in_ecount_opt
+        #define __in_ecount_opt  SAL__in_ecount_opt
+    #endif
+    #ifndef __out_bcount_opt
+        #define __out_bcount_opt    SAL__out_bcount_opt
+    #endif
+#endif
+
+
 #include <sqlcli.h>
 #ifndef AS400
 #include <sqlcli1.h>
